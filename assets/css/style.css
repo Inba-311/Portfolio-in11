@@ -9,3 +9,173 @@ div{
     padding: 20px 10px;
     margin: 0px 10% !important;
 }
+
+
+/* ad card section */
+.card {
+    position: relative;
+    height: 200px;
+    background-color: rgba(15,15,15);
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }  
+  .card::before {
+    content: '';
+    position: absolute;
+    top: var(--y);
+    left: var(--x);
+    transform: translate(-50%, -50%);
+    background: radial-gradient(var(--clr), transparent, transparent);
+    width: 350px;
+    height: 350px;
+    opacity: 0;
+    transition: 0.5s, top 0s, left 0s;
+    z-index: 1;
+  }
+  .card:hover::before {
+    opacity: 1;
+  }
+  .card::after {
+    content: '';
+    position: absolute;
+    inset: 3px;
+    border-radius: 20px;
+    background-color: rgba(15,15,15);
+    z-index: 2;
+  }
+
+  /* service section */
+  
+.service-card 
+  {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: rgba(15,15,15);
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  .service-card::before
+  {
+    content: '';
+    position: absolute;
+    top: var(--y);
+    left:var(--x);
+    transform: translate(-50%, -50%);
+    background: radial-gradient(var(--clr), transparent, transparent);
+    width: 700px;
+    height: 700px;
+    opacity: 0;
+    transition: 0.5s, top 0s, left 0s;
+    z-index: 1;
+  }
+  .service-card::after{
+    content: '';
+    position: absolute;
+    inset: 3px;
+    border-radius: 20px;
+    background-color: rgba(15,15,15, .9);
+    z-index: 2;
+  }
+
+  .service-card:hover::before{
+    opacity: 1;
+  }
+  .service-card .content {
+    position: relative;
+    z-index: 3;
+  }
+/* resume card section */
+.resume-card{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: rgba(15,15,15);
+  border-radius: 20px;
+  overflow: hidden;
+}
+.resume-card::before
+  {
+    content: '';
+    position: absolute;
+    top: var(--y);
+    left:var(--x);
+    transform: translate(-50%, -50%);
+    background: radial-gradient(var(--clr), transparent, transparent);
+    width: 200%;
+    height: 200%;
+    opacity: 0;
+    transition: 0.5s, top 0s, left 0s;
+    z-index: 1;
+  }
+  .resume-card::after{
+    content: '';
+    position: absolute;
+    inset: 3px;
+    border-radius: 20px;
+    background-color: rgba(15,15,15, 1);
+    z-index: 2;
+  }
+  .service-card:hover{
+    border: none;
+  }
+  .resume-card:hover::before{
+    opacity: 1;
+  }
+  .resume-card .content {
+    position: relative;
+    z-index: 3;
+  }
+  h4{
+    text-transform: uppercase;
+  }
+  content{
+    top: 0;
+  }
+
+  .card .content {
+    position: relative;
+    z-index: 3;
+  }
+
+  .cursorimg{
+     width: 50px !important;
+  transform-origin: center;
+  }
+  #cursor{
+    z-index: 999;
+    position: fixed;
+    /* background: #2697e8; */
+    /* width: 20px;
+    height: 20px; */
+    border-radius: 50%;
+    pointer-events: none;
+    /* box-shadow: 0 0 20px #2696e8,
+    0 0 60px #2696e8,
+    0 0 100px #2696e8; */
+    animation: colors 5s infinite;
+    transform: translate(-50%, -50%);
+    transition: top 0.1s, left 0.1s;
+   }
+ /* @keyframes colors{
+  0%{
+    filter:hue-rotate(0deg);
+  }
+  100%{
+    filter:hue-rotate(360deg);
+  }
+ } */
+    #cursor:before{
+      content: '';
+      position:absolute;
+      /* background: #2696e8; */
+      width: 50px;
+      height: 50px;
+      opacity: 0.2;
+      transform: translate(-30%, -30%);
+      border-radius: 50%;
+    }
